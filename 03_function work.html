@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/alert.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="title" class="title1">알림창임</p>
+        <!-- <button onclick="알림창열기('none')">닫기</button> -->
+        <button id="close">닫기</button>      
+    </div>
+
+    <button onclick="아이디알림창()">버튼1</button> 
+    <button onclick="비번알림창()">버튼2</button>
+   
+
+    <script>
+
+        // close란 id를 클릭(닫기버튼)했을 때(이벤트리스너) function 안에 코드를 실행시켜주겠다
+        document.getElementById('close').addEventListener('mouseover', function() {
+            document.getElementById('alert').style.display = 'none';
+        });
+
+        // 콜백함수 (파라미터 자리에 들어가는 하뭇 ()
+
+    //닫기버튼 기능
+    function 알림창열기(구멍){
+        document.getElementById('alert').style.display = 구멍;
+    }
+
+
+    // 1. p태그 내용을 아이디 입력으로 바꿈
+    document.getElementById('title').innerHTML = '아이디입력하세요';   
+    // 2. 띄움
+    document.getElementById('alert').style.display = 'block';
+
+        function 아이디알림창() {
+            document.getElementsByClassName('title1')[0].innerHTML = '아이디입력하세요';
+            document.getElementById('alert').style.display = 'block';  
+        }
+
+        function 비번알림창() {
+            document.getElementById('title').innerHTML = '비번입력하세요';
+            document.getElementById('alert').style.display = 'block';  
+        }
+
+   
+    </script> 
+
+
+
+</body>
+</html>

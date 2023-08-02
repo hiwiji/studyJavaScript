@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/alert.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">알림창임
+        <button onclick="알림창열기('none')">닫기</button>    
+    </div>
+    <button onclick="알림창열기('block')">버튼</button>
+   
+
+    <script>
+
+        function 알림창열기(구멍){
+            document.getElementById('alert').style.display = 구멍;
+        }
+
+        function plus() {
+            2 + 1 // 3
+        }
+        
+        function plus2() {
+            2 + 2 // 4
+        }
+
+        function plus3() {
+            2 + 3 // 5
+        }
+
+        // 파라미터 중복사용
+        function plus(구멍) {
+            2 + 구멍
+        }
+
+        plus(1);    // 2+1 = 3
+        plus(2);    // 2+2 = 4
+        plus(3);    // 2+3 = 5
+
+        // function 알림창열기() {
+        //     document.getElementById('alert').style.display='block';
+        // }
+
+        // function closeAlert() {
+        //     document.getElementById('alert').style.display='none';
+        // }
+    </script> 
+
+
+
+</body>
+</html>
