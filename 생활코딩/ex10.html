@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Object</h1>
+   <h2>Create</h2>
+
+    <script>
+        var coworkers = {
+            "programmer" : "egoing",
+            "designer" : "leezche"
+        };
+
+        document.write("programmer : " + coworkers.programmer + "<br>");
+        document.write("designer : " + coworkers.designer + "<br>");
+
+
+        coworkers.bookkeeper = "duru";
+        document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+
+        coworkers["data scientist"] = "taeho";
+        document.write("data scientist : " + coworkers["data scientist"]  + "<br>" );
+    </script>
+
+
+    <h2>Iterate</h2>
+    <script>
+        for(var key in coworkers) {
+            document.write(key +  ' : ' + coworkers[key]+'<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+    <script>
+        coworkers.showAll = function() {
+            for(var key in this) {
+                document.write(key +  ' : ' + this[key]+'<br>');
+                // 위에서 쓰인 showAll 이라는 객체이름이 다른이름으로 바꼈을 경우,
+                // 아래에서는 실행을 못시킴
+                // 그래서 showAll 이라는 함수안에서 
+                // 함수가 소속되어 있는 객체를 가리키는 약속된 기호 = this
+                
+                // 객체(coworkers)의 소속된 변수(showAll)의 값으로 함수( function(){} ) 를 지정할 수 있고
+                // 객체(coworkers)의 소속된 함수(showAll)를 만들 수 있다.
+                // 객체의 소속된 함수(showAll)를 메소드
+                // 객체의 소속된 변수 (programmer , designer)를 property라고 부른다.
+                
+
+            }
+        }
+
+        coworkers.showAll();
+    </script>
+
+</body>
+</html>
