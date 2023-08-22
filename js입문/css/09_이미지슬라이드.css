@@ -42,3 +42,22 @@
   padding: 100px 20px;
   background-color: lightgrey;
 }
+
+
+/* 이미지 슬라이드 기능*/
+
+.slide-container {
+  width: 300vw;
+  /*margin-left : -100vw;*/
+  /*vw == 브라우저 폭임. 꽉차는건 100vw임 */
+  transition : all 1s;
+}
+
+.slide-box {
+  width: 100vw;
+  float : left;
+}
+
+.slide-box img {
+  width: 100%;
+}
